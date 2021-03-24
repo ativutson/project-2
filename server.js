@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
-const port = 8001;
+const methodOverride = require('method-override');
+const port = process.env.PORT || 8001;
 require("./config/database");
 
 const indexRouter = require("./routes/index");
@@ -15,10 +16,11 @@ app.use(morgan("dev"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
+app.use(methodOverride('_method'));
 
-//app.use("/", indexRouter);
-app.use("/", blogsRouter);
-//app.use("/", commentsRouter);
+app.use("/", indexRouter);
+app.use("/blogs", blogsRouter);
+app.use("/", commentsRouter);
 
 app.listen(port, () => {
   console.log(`Express is listening on port:${port}`);

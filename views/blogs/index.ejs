@@ -10,9 +10,9 @@
   <header>
     <nav>
       <ul>
-        <li><a href="">Sign Up</a></li>
-        <li><a href="">Log In</a></li>
-        <li><a href="">About</a></li>                                                                                                                                                                         </li>
+        <li><a href="/users/new">Sign Up</a></li>
+        <li><a href="/users/login">Log In</a></li>
+        <li><a href="/blogs/new">Create Post</a></li>
       </ul>
     </nav>
   </header>
@@ -22,7 +22,7 @@
     <% blogs.forEach(function(blog) { %>
       <tr> 
         <td><%= blog.title %></td>
-        <td><a href="blogs/<%= blog._id %>"></a>MORE</td>
+        <td><a href="blogs/<%= blog._id %>">MORE</a></td>
       </tr>
       <% }); %>
   </tbody>

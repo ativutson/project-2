@@ -7,6 +7,40 @@
     <title>Son's Awesome Blog</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+          <ul>
+            <li><a href="/blogs">Home</a></li>
+            <li><a href="">Sign Up</a></li>
+            <li><a href="">Log In</a></li>
+          </ul>
+        </nav>
+    </header>
+    <section>
+        <div>Title:</div>
+        <div><%= blog.title %></div>
+        <div>Post:</div>
+        <div><%= blog.content %></div>
+    </section>
+    <tbody>
+        <% blog.comments.forEach((comment) => { %>
+        <tr>
+            <td><%= comment.content %></td>
+        </tr>
+        <% }); %>
+        <% blog.comments.forEach((comment, _id) => { %>
+        <tr>
+            <td>
+                <form action="/comments/<%= comment._id %>?_method=DELETE" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+      <form id="comment-form" method="POST" action="/blogs/<%= blog._id %>/comments">       <label>Leave Comment:</label>
+        <textarea name="content"></textarea>
+        <input type="submit"/>
+      </form>
 </body>
 </html>

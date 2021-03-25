@@ -33,7 +33,10 @@ function update(req, res) {
 }
 
 function newEdit(req, res) {
-  res.render("blogs/edit");
+  Blog.findOne({ "comments._id": req.params.id }, function(err, blog) {
+    const comment = blog.comments.id(req.params.id);
+  res.render("blogs/edit", { comment });
+  });
 }
 
 

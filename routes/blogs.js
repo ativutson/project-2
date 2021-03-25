@@ -7,4 +7,5 @@ router.get("/new", blogsCtrl.new);
 router.get('/:id', blogsCtrl.show);
 router.post("/", blogsCtrl.create);
 
+
 module.exports = router;

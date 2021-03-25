@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Son's Awesome Blog</title>
 </head>
 <body>
@@ -22,25 +23,32 @@
         <div>Post:</div>
         <div><%= blog.content %></div>
     </section>
-    <tbody>
+    <table>
+        <tbody>
         <% blog.comments.forEach((comment) => { %>
         <tr>
             <td><%= comment.content %></td>
         </tr>
-        <% }); %>
-        <% blog.comments.forEach((comment, _id) => { %>
+        <tr>
+        </tr>
         <tr>
             <td>
                 <form action="/comments/<%= comment._id %>?_method=DELETE" method="post">
                     <button type="submit">Delete</button>
                 </form>
             </td>
+            <td>                    
+                <button type="submit"><a href="/comments/<%= comment._id %>/edit">Edit</a></button>
+                
+            </td>
         </tr>
         <% }); %>
-    </tbody>
-      <form id="comment-form" method="POST" action="/blogs/<%= blog._id %>/comments">       <label>Leave Comment:</label>
+        </tbody>
+    </table>
+    <form id="comment-form" method="POST" action="/blogs/<%= blog._id %>/comments">       
+        <label>Leave Comment:</label>
         <textarea name="content"></textarea>
         <input type="submit"/>
-      </form>
+    </form>
 </body>
 </html>

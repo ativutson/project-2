@@ -4,10 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
   <title>Son's Awesome Blog</title>
 </head>
 <body>
   <header>
+    <h1>Son's Awesom Blog</h1>
     <nav>
       <ul>
         <li><a href="/users/new">Sign Up</a></li>
@@ -16,17 +18,18 @@
       </ul>
     </nav>
   </header>
+  
   <h1>Welcome To Son's Awesome Blog</h1>
   <h2>All Posts</h2>
-  <tbody>
-    <% blogs.forEach(function(blog) { %>
-      <tr> 
-        <td><%= blog.title %></td>
-        <td><a href="blogs/<%= blog._id %>">MORE</a></td>
-      </tr>
-      <% }); %>
-  </tbody>
-  
-
+  <table>
+    <tbody>
+     <% blogs.forEach(function(blog) { %>
+       <tr> 
+         <td><%= blog.title %></td>
+         <td><a href="/blogs/<%= blog._id %>">MORE</a></td>
+       </tr>
+     <% }); %>
+    </tbody>
+  </table>
   </body>
 </html>

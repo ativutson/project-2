@@ -29,38 +29,27 @@ li {
     margin-top: 30px;
     margin-right: 100px;
     margin-left: 100px;
-    
 }
 
 .blog-title {
     margin-left: 50px;
     margin-top: 10px;
     font-family: 'Train One', cursive;
-    color:green
-}
-
-.blogs {
-    margin-left: 50px;
-    height: 50px;
-    font-size: 20px;
-    font-family: 'Trispace', sans-serif;
-}
-
-h2 {
-    text-align: center;
-    margin-top: 50px;
-    font-family: 'Trispace', sans-serif;
+    color: coral;
 }
 
 a {
     text-decoration: none;
     font-family: 'Trispace', sans-serif;
-}
-
-.nav-link {
     color: black;
 }
 
-table {
-    margin: 0 auto;
+
+form {
+    margin-left: 50px;
+    margin-top: 50px
+}
+
+.title-form {
+    width: 650px;
 }

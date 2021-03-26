@@ -28,11 +28,7 @@
         <tbody>
         <% blog.comments.forEach((comment) => { %>
         <tr>
-            <div class="comment">
-            <td><%= comment.content %></td>
-            </div>
-        </tr>
-        <tr>
+            <td class="comment"><%= comment.content %></td>
         </tr>
         <tr class="buttons">
             <td>
@@ -40,8 +36,8 @@
                     <button type="submit">Delete</button>
                 </form>
             </td>
-            <td>                    
-                <a href="/blogs/<%= comment._id %>/comments">Edit</a>
+            <td>
+                <a class="button" href="/blogs/<%= comment._id %>/comments">Edit</a>
             </td>
         </tr>
         <% }); %>
@@ -49,8 +45,8 @@
     </table>
     <form id="comment-form" method="POST" action="/blogs/<%= blog._id %>/comments">       
         <label>Leave Comment:</label><br>
-        <textarea name="content"></textarea>
-        <input type="submit"/>
+        <textarea name="content" cols="80" rows="10"></textarea></br>
+        <input class="submit-btn" type="submit"/>
     </form>
 </body>
 </html>

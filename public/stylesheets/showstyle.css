@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap');
 
 body {
     padding:0;
@@ -7,7 +8,7 @@ body {
 
 
 header {
-    height: 100px;
+    height: 100%;
     margin-top: 0;
     padding: 0;
     background-color: aquamarine;
@@ -16,15 +17,16 @@ header {
     text-align: center;
 }
 
+ul {
+    margin-top: 30px;
+}
+
 li {
     display: inline;
-    padding: 30px, 20px;
     margin-top: 30px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
     text-decoration: none;
-    
 }
 
 h1 {
@@ -34,16 +36,18 @@ h1 {
 
 .blog-title {
     margin-left: 50px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: 'Train One', cursive;
 }
 
 a {
     text-decoration: none;
+    font-family: 'Trispace', sans-serif;
 }
 
 h2 {
     text-align: center;
+
 }
 
 table {
@@ -64,15 +68,16 @@ tbody {
     margin-left: 50px;
     margin-right: 50px;
     font-size: 25px;
+    font-family: 'Trispace', sans-serif;
 }
 
 .blog-content {
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
-
     font-size: 15px;
     line-height: 2.5;
+    font-family: 'Trispace', sans-serif;
 
 }
 
@@ -80,7 +85,7 @@ tbody {
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
-
+    margin-bottom: 30px;
     font-size: 20px;
 
 }
@@ -88,7 +93,6 @@ tbody {
     margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
-
     font-size: 15px;
 }
 
@@ -113,9 +117,31 @@ a {
 .buttons {
     margin-top: 50px;
     margin-left: 50px;
+    height: 50px;
 }
 
 textarea {
     margin-left: 50px;
+}
+
+.submit-btn {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* stackoverflow */
+.button {
+    display: block;
+    width: 30px;
+    height: 7px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: justify;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 7px;
+    position: relative;
 }
 

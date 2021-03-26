@@ -13,7 +13,10 @@
       <h1 class="blog-title">Son's Awesome Blog</h1>
       <nav>
         <ul>
-          <li><a href="/blogs/new" class="nav-link">Create Post</a></li>
+          <li><a class="nav-links" href="/blogs">Home</a></li>
+          <li><a class="nav-links" href="">Sign Up</a></li>
+          <li><a class="nav-links" href="">Log In</a></li>
+          <li><a class="nav-links" href="/blogs/new">Create Post</a></li>
         </ul>
       </nav>
     </header>
@@ -24,6 +27,8 @@
       <% blogs.forEach(function(blog) { %>
         <tr> 
           <td class="blogs"><%= blog.title %></td>
+        </tr>
+        <tr>
           <td><a href="/blogs/<%= blog._id %>">Read More</a></td>
         </tr>
       <% }); %>
